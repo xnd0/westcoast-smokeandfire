@@ -11,7 +11,8 @@ export default function MainPage() {
             </div>
 
             <div className='main-center'>
-                <p>westcoast smoke and fire map</p>
+                {/* <p>westcoast smoke and fire map</p> */}
+                <div id='map'>(map goes here)</div>
             </div>
 
             <div className='main-rightside'>
