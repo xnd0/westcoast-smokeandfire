@@ -26,12 +26,12 @@
 
 .App-main {
   background-color: #b5c2da;
-  min-height: 60vh;
+  /* min-height: 60vh; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
