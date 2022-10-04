@@ -69,12 +69,19 @@
 }
 
 
+.leaflet-container {
+  /* width: 100%;
+  height: 100vh; */
+  min-height: 55vh;
+  min-width: 75vh;
+}
+
 #map {
   /* height: 200px; 
   width: 300px; */
   min-height: 55vh;
   min-width: 75vh;
-  background-image: linear-gradient(red, blue);
+  /* background-image: linear-gradient(red, blue); */
 }
 
 
