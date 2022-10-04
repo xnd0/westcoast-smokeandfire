@@ -28,14 +28,24 @@
   background-color: #b5c2da;
   min-height: 60vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.main-leftside {
+  background-color: #adb1b7;
+  min-height: 60vh;
+  min-width: 15vh;
+}
 
+.main-rightside {
+  background-color: #adb1b7;
+  min-height: 60vh;
+  min-width: 15vh;
+}
 
 
 .flex-apart {
