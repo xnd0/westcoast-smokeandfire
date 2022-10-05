@@ -20,7 +20,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 1vmin);
+  font-size: calc(8px + 1vmin);
   color: white;
 }
 
@@ -37,14 +37,15 @@
 
 .main-leftside {
   background-color: #adb1b7;
-  min-height: 65vh;
-  min-width: 15vh;
+  min-height: 80vh;
+  min-width: 10vh;
 }
 
 .main-rightside {
   background-color: #adb1b7;
-  min-height: 65vh;
+  min-height: 80vh;
   min-width: 15vh;
+  max-width: 170px;
 }
 
 
@@ -59,31 +60,23 @@
 
 .App-footer {
   background-color: #0f1012;
-  min-height: 4vh;
+  min-height: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 1vmin);
+  font-size: calc(8px + 1vmin);
   color: white;
 }
 
-
 .leaflet-container {
-  /* width: 100%;
-  height: 100vh; */
-  min-height: 65vh;
-  min-width: 75vw;
-  max-height: 100vh;
-  max-width: 100vh;
+  min-height: 80vh;
+  min-width: 80vw;
 }
 
 #map {
-  /* height: 200px; 
-  width: 300px; */
-  min-height: 65vh;
-  min-width: 75vh;
-  /* background-image: linear-gradient(red, blue); */
+  min-height: 80vh;
+  min-width: 80vh;
 }
 
 
