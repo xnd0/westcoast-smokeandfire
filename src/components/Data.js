@@ -9,7 +9,7 @@
 // los angeles
 
 
-export const data=[
+export const data = [
     {
         name: "WestCoast, USA",
         coordinates: {

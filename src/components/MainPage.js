@@ -10,9 +10,9 @@ import { data } from "./Data";
 
 export default function MainPage() {
 
-
     const [index, setIndex] = useState(0);
-
+    
+    
     return (
         <div className='App-main'>
             <div className='main-leftside'>
@@ -20,7 +20,7 @@ export default function MainPage() {
             </div>
 
             <div className='main-center'>
-                    <Map data={data} index={index} />
+                <Map data={data} index={index} />
             </div>
 
             <div className='main-rightside'>

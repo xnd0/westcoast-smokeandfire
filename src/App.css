@@ -69,22 +69,14 @@
   color: white;
 }
 
-
 .leaflet-container {
-  /* width: 100%;
-  height: 100vh; */
   min-height: 80vh;
   min-width: 80vw;
-  max-height: 100vh;
-  max-width: 100vh;
 }
 
 #map {
-  /* height: 200px; 
-  width: 300px; */
-  min-height: 65vh;
-  min-width: 75vh;
-  /* background-image: linear-gradient(red, blue); */
+  min-height: 80vh;
+  min-width: 80vh;
 }
 
 
