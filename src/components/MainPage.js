@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+
+import Map from "./Map";
 // import './App.css';
 // import { Icon } from "leaflet";
 // import * as parkData from "./data/skateboard-parks.json";
@@ -26,7 +28,7 @@ export default function MainPage() {
     let latitude = 34;
     let longitude = -188.5;
 
-    const locdata = [
+    const data = [
         {
             name: "WestCoast",
             coordinates: {
@@ -62,6 +64,8 @@ export default function MainPage() {
     //     console.log(xcoord, ycoord, 'are coords')
     // }
 
+    const [index, setIndex] = useState(0);
+
     return (
         <div className='App-main'>
             <div className='main-leftside'>
@@ -70,7 +74,7 @@ export default function MainPage() {
 
             <div className='main-center'>
                 {/* <p>westcoast smoke and fire map</p> */}
-                <div id='map'>
+                {/* <div id='map'>
 
                     <MapContainer 
                     center={[latitude, longitude]} 
@@ -81,7 +85,15 @@ export default function MainPage() {
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         />
                     </MapContainer>
-                </div>
+                </div> */}
+
+<>
+      <Map data={data} index={index} />
+      {data.map(({ name }, idx) => (
+        <button onClick={() => setIndex(idx)}>{`Go to ${name}`}</button>
+      ))}
+    </>
+
             </div>
 
             <div className='main-rightside'>
@@ -91,7 +103,7 @@ export default function MainPage() {
                 <button id='pdx'>Portland, OR</button>
                 <button id='eug'>Eugene, OR</button>
                 <button id='sf'>San Francisco, CA</button>
-                <button id='la' onClick={handleLA}>Los Angeles, CA</button>
+                {/* <button id='la' onClick={handleLA}>Los Angeles, CA</button> */}
             </div>
         </div>
     );
