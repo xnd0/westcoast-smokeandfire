@@ -1,6 +1,6 @@
 // import React from 'react';
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 // import './App.css';
 // import { Icon } from "leaflet";
@@ -23,8 +23,15 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export default function MainPage() {
 
-    let xcoord = 34;
-    let ycoord = -118.5;
+    let xcoord = 0;
+    let ycoord = 0;
+
+
+    const handleLA = () => {
+        xcoord = 34;
+        ycoord = -118.5;
+        console.log(xcoord, ycoord, 'are coords')
+    }
 
     return (
         <div className='App-main'>
@@ -48,12 +55,12 @@ export default function MainPage() {
 
             <div className='main-rightside'>
                 <p>(right)</p>
-                <button>West Coast, USA</button>
-                <button>Seattle, WA</button>
-                <button>Portland, OR</button>
-                <button>Eugene, OR</button>
-                <button>San Francisco, CA</button>
-                <button>Los Angeles, CA</button>
+                <button id='westcoast'>West Coast, USA</button>
+                <button id='sea'>Seattle, WA</button>
+                <button id='pdx'>Portland, OR</button>
+                <button id='eug'>Eugene, OR</button>
+                <button id='sf'>San Francisco, CA</button>
+                <button id='la' onClick={handleLA}>Los Angeles, CA</button>
             </div>
         </div>
     );
