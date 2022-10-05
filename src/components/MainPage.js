@@ -23,6 +23,9 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export default function MainPage() {
 
+    let xcoord = 34;
+    let ycoord = -118.5;
+
     return (
         <div className='App-main'>
             <div className='main-leftside'>
@@ -32,7 +35,9 @@ export default function MainPage() {
             <div className='main-center'>
                 {/* <p>westcoast smoke and fire map</p> */}
                 <div id='map'>
-                    <MapContainer center={[39, -125]} zoom={5} scrollWheelZoom={false}>
+                    {/* <MapContainer center={[39, -125]} zoom={5} scrollWheelZoom={false}> */}
+                    {/* <MapContainer center={[34, -118.5]} zoom={10} scrollWheelZoom={true}> */}
+                    <MapContainer center={[xcoord, ycoord]} zoom={10} scrollWheelZoom={true}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -43,6 +48,12 @@ export default function MainPage() {
 
             <div className='main-rightside'>
                 <p>(right)</p>
+                <button>West Coast, USA</button>
+                <button>Seattle, WA</button>
+                <button>Portland, OR</button>
+                <button>Eugene, OR</button>
+                <button>San Francisco, CA</button>
+                <button>Los Angeles, CA</button>
             </div>
         </div>
     );
