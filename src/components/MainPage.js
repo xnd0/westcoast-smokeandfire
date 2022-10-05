@@ -34,25 +34,24 @@ export default function MainPage() {
             coordinates: {
                 latitude: "39",
                 longitude: "-125",
-                zoomint: "5",
-            }
+            },
+            zoomint: "5"
         },
         {
             name: "Seattle",
             coordinates: {
-                latitude: "47",
+                latitude: "47.3",
                 longitude: "-122",
-                zoomint: "10",
-            }
+            },
+            zoomint: "8"
         },
-
         {
             name: "Los Angeles",
             coordinates: {
                 latitude: "34",
-                longitude: "-188.5",
-                zoomint: "10",
-            }
+                longitude: "-118.5",
+            },
+            zoomint: "10"
         },
 
     ];
@@ -90,7 +89,7 @@ export default function MainPage() {
 <>
       <Map data={data} index={index} />
       {data.map(({ name }, idx) => (
-        <button onClick={() => setIndex(idx)}>{`Go to ${name}`}</button>
+        <button onClick={() => setIndex(idx)}>{`Goto ${name}`}</button>
       ))}
     </>
 
@@ -98,11 +97,11 @@ export default function MainPage() {
 
             <div className='main-rightside'>
                 <p>(right)</p>
-                <button id='westcoast'>West Coast, USA</button>
+                {/* <button id='westcoast'>West Coast, USA</button>
                 <button id='sea'>Seattle, WA</button>
                 <button id='pdx'>Portland, OR</button>
                 <button id='eug'>Eugene, OR</button>
-                <button id='sf'>San Francisco, CA</button>
+                <button id='sf'>San Francisco, CA</button> */}
                 {/* <button id='la' onClick={handleLA}>Los Angeles, CA</button> */}
             </div>
         </div>

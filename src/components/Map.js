@@ -5,10 +5,10 @@ import "leaflet/dist/leaflet.css";
 
 // import icon from "./constants";
 
-function SetViewOnClick({ coords }) {
+function SetViewOnClick({ coords, zoom }) {
   const map = useMap();
-  map.setView(coords, map.getZoom());
-
+  map.setView(coords, zoom);
+  
   return null;
 }
 
@@ -21,7 +21,7 @@ export default function Map(props) {
         data[index].coordinates.latitude,
         data[index].coordinates.longitude
       ]}
-      zoom={5}
+      zoom={data[index].zoomint}
     //   style={{ height: "90vh" }}
     >
       <TileLayer
@@ -42,6 +42,7 @@ export default function Map(props) {
           data[index].coordinates.latitude,
           data[index].coordinates.longitude
         ]}
+        zoom={data[index].zoomint}
       />
     </MapContainer>
   );
