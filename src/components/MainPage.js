@@ -23,15 +23,44 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export default function MainPage() {
 
-    let xcoord = 0;
-    let ycoord = 0;
+    let latitude = 34;
+    let longitude = -188.5;
+
+    const locdata = [
+        {
+            name: "WestCoast",
+            coordinates: {
+                latitude: "39",
+                longitude: "-125",
+                zoomint: "5",
+            }
+        },
+        {
+            name: "Seattle",
+            coordinates: {
+                latitude: "47",
+                longitude: "-122",
+                zoomint: "10",
+            }
+        },
+
+        {
+            name: "Los Angeles",
+            coordinates: {
+                latitude: "34",
+                longitude: "-188.5",
+                zoomint: "10",
+            }
+        },
+
+    ];
 
 
-    const handleLA = () => {
-        xcoord = 34;
-        ycoord = -118.5;
-        console.log(xcoord, ycoord, 'are coords')
-    }
+    // const handleLA = () => {
+    //     xcoord = 34;
+    //     ycoord = -118.5;
+    //     console.log(xcoord, ycoord, 'are coords')
+    // }
 
     return (
         <div className='App-main'>
@@ -44,7 +73,7 @@ export default function MainPage() {
                 <div id='map'>
                     {/* <MapContainer center={[39, -125]} zoom={5} scrollWheelZoom={false}> */}
                     {/* <MapContainer center={[34, -118.5]} zoom={10} scrollWheelZoom={true}> */}
-                    <MapContainer center={[xcoord, ycoord]} zoom={10} scrollWheelZoom={true}>
+                    <MapContainer center={[latitude, longitude]} zoom={[zoomint]} scrollWheelZoom={true}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
