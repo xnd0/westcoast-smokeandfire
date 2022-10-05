@@ -38,13 +38,14 @@
 .main-leftside {
   background-color: #adb1b7;
   min-height: 65vh;
-  min-width: 15vh;
+  min-width: 5vh;
 }
 
 .main-rightside {
   background-color: #adb1b7;
   min-height: 65vh;
   min-width: 15vh;
+  max-width: 170px;
 }
 
 
