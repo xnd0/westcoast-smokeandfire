@@ -1,5 +1,6 @@
 // -- location data file -- //
-// -- currently: 
+
+// -- current list is: 
 // full westcoast map
 // seattle
 // portland
@@ -52,9 +53,9 @@ export const data=[
     {
         name: "Los Angeles, CA",
         coordinates: {
-            latitude: "33.9",
-            longitude: "-118.4",
+            latitude: "33.958",
+            longitude: "-118.45",
         },
-        zoomint: "10"
+        zoomint: "12"
     }
 ]
