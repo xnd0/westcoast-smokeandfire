@@ -71,9 +71,11 @@ export default function MainPage() {
             <div className='main-center'>
                 {/* <p>westcoast smoke and fire map</p> */}
                 <div id='map'>
-                    {/* <MapContainer center={[39, -125]} zoom={5} scrollWheelZoom={false}> */}
-                    {/* <MapContainer center={[34, -118.5]} zoom={10} scrollWheelZoom={true}> */}
-                    <MapContainer center={[latitude, longitude]} zoom={[zoomint]} scrollWheelZoom={true}>
+
+                    <MapContainer 
+                    center={[latitude, longitude]} 
+                    zoom={[zoomint]} 
+                    scrollWheelZoom={true}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
