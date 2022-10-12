@@ -6,6 +6,8 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Map from "./Map";
 import { data } from "./Data";
 
+import FireAPI from "./FireAPI";
+
 
 
 export default function MainPage() {
@@ -18,7 +20,7 @@ export default function MainPage() {
             <div className='main-leftside'>
                 <p>(left)</p>
                 <p>search:</p>
-                <button> Active Wildfires </button>
+                <button onClick={FireAPI}> Active Wildfires </button>
             </div>
 
             <div className='main-center'>
