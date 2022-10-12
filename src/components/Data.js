@@ -40,7 +40,7 @@ export const data = [
             latitude: "44.052",
             longitude: "-123.087",
         },
-        zoomint: "12"
+        zoomint: "10"
     },
     {
         name: "San Francisco, CA",
@@ -56,6 +56,6 @@ export const data = [
             latitude: "33.958",
             longitude: "-118.45",
         },
-        zoomint: "12"
+        zoomint: "10"
     }
 ]

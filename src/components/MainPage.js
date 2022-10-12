@@ -17,6 +17,8 @@ export default function MainPage() {
         <div className='App-main'>
             <div className='main-leftside'>
                 <p>(left)</p>
+                <p>search:</p>
+                <button> Active Wildfires </button>
             </div>
 
             <div className='main-center'>
@@ -25,6 +27,7 @@ export default function MainPage() {
 
             <div className='main-rightside'>
                 <p>(right)</p>
+                <p>goto:</p>
                 {data.map(({ name }, idx) => (
                     <button onClick={() => setIndex(idx)}>{`${name}`}</button>
                 ))}
