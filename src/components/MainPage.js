@@ -8,6 +8,7 @@ import { data } from "./Data";
 
 import FireAPI from "./FireAPI";
 import APItest from "./APItest";
+import OneFire from "./OneFire";
 
 
 
@@ -23,6 +24,8 @@ export default function MainPage() {
                 <p>search:</p>
                 <button onClick={FireAPI}> Active Wildfires </button>
                 <button onClick={APItest}> APItest </button>
+                <button onClick={OneFire}> Place One Fire Marker </button>
+                {/* <FireAPI /> */}
             </div>
 
             <div className='main-center'>
