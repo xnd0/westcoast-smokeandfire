@@ -1,7 +1,7 @@
 // import React from 'react';
 
-import React, { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React, { useState } from "react";
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 import Map from "./Map";
 import { data } from "./Data";
