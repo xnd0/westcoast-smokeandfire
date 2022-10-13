@@ -7,6 +7,7 @@ import Map from "./Map";
 import { data } from "./Data";
 
 import FireAPI from "./FireAPI";
+import APItest from "./APItest";
 
 
 
@@ -21,6 +22,7 @@ export default function MainPage() {
                 <p>(left)</p>
                 <p>search:</p>
                 <button onClick={FireAPI}> Active Wildfires </button>
+                <button onClick={APItest}> APItest </button>
             </div>
 
             <div className='main-center'>

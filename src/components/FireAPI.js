@@ -7,4 +7,15 @@ export default function FireAPI () {
     console.log('connected FireAPI')
 
 
+    
+    fetch(
+        "https://jsonplaceholder.typicode.com/users")
+                    .then((res) => res.json())
+                    .then((json) => {
+                        this.setState({
+                            items: json,
+                            // DataisLoaded: true
+                        });
+                    })
+
 }
