@@ -6,7 +6,9 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-import fireicon from "./images/fire-icon.png";
+// import fireicon from "./images/fire-icon.png";
+
+import AddMarker from "./AddMarker";
 
 
 
@@ -38,6 +40,8 @@ export default function Map(props) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ></TileLayer>
       
+      <AddMarker />
+
       <Marker
         position={[
           data[index].coordinates.latitude,
