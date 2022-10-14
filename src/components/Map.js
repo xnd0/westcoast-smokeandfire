@@ -15,7 +15,7 @@ import AddMarker from "./AddMarker";
 function SetViewOnClick({ coords, zoom }) {
   const map = useMap();
   map.setView(coords, zoom);
-  
+
   return null;
 }
 
@@ -23,8 +23,6 @@ function SetViewOnClick({ coords, zoom }) {
 
 export default function Map(props) {
   const { index, data } = props;
-
-  L.marker([40, -140]);
 
   return (
     <MapContainer
@@ -39,29 +37,19 @@ export default function Map(props) {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ></TileLayer>
-      
+
       <AddMarker />
 
-      <Marker
-        position={[
-          data[index].coordinates.latitude,
-          data[index].coordinates.longitude
-        ]}
-        // icon={fireicon}
-      >
-        <Popup>TEST-FIRE</Popup>
-      </Marker>
 
-      
-      <Marker
+      {/* <Marker
         position={[
           data[index].coordinates.latitude,
           data[index].coordinates.longitude
         ]}
-        // icon={fireicon}
+        // icon={icon}
       >
         <Popup>TEST-FIRE</Popup>
-      </Marker>
+      </Marker> */}
 
       <SetViewOnClick
         coords={[
