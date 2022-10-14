@@ -3,6 +3,9 @@ import React from "react";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
+// import icon from "./smoke-and-fire-icon.png";
+
+
 
 function SetViewOnClick({ coords, zoom }) {
   const map = useMap();
@@ -27,15 +30,17 @@ export default function Map(props) {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ></TileLayer>
-      {/* <Marker
+      
+      <Marker
         position={[
           data[index].coordinates.latitude,
           data[index].coordinates.longitude
         ]}
         // icon={icon}
       >
-        <Popup>{data[index].name}</Popup>
-      </Marker> */}
+        <Popup>TEST-FIRE</Popup>
+      </Marker>
+
       <SetViewOnClick
         coords={[
           data[index].coordinates.latitude,
