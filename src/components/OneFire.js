@@ -3,17 +3,27 @@
 export default function OneFire() {
     console.log('OneFire Button Trigger')
 
-    let url = 'https://eonet.gsfc.nasa.gov/api/v3/events?category=wildfires'
+    let url = 'https://eonet.gsfc.nasa.gov/api/v3/events?category=wildfires';
 
+    let mylat = 0;
+    let mylong = 0;
 
     fetch(url)
         .then(response => response.json())
         .then(data => (
             console.log("1", data.events[0]),
             console.log("2", data.events[0].geometry),
-            console.log("3", data.events[0].geometry[0].coordinates)
-            // console.log(data.events[0].geometry.coordinates[1])
+            console.log("3", data.events[0].geometry[0].coordinates),
+            console.log("4-latitude", data.events[0].geometry[0].coordinates[0]),
+            console.log("5-longitude", data.events[0].geometry[0].coordinates[1]),
 
-        ))
+            mylat = data.events[0].geometry[0].coordinates[0],
+            mylong = data.events[0].geometry[0].coordinates[1],
+            
+            console.log('OneFire Latitude (mylat): ', mylat),
+            console.log('OneFire Longitude: (mylong)', mylong)               
+        )
+        )
         .catch(error => console.log(error))
+
 }

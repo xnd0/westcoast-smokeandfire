@@ -26,6 +26,7 @@ export default function MainPage() {
                 <button onClick={APItest}> APItest </button>
                 <button onClick={OneFire}> Place One Fire Marker </button>
                 {/* <FireAPI /> */}
+                {/* <OneFire /> */}
             </div>
 
             <div className='main-center'>
