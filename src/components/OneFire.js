@@ -1,5 +1,10 @@
 import React from "react";
 
+
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+
+
 export default function OneFire(props) {
     let { mylat, mylong, mytitle } = props;
 
@@ -12,6 +17,7 @@ export default function OneFire(props) {
     // -- adjust for different wildfires (events) -- //
     let i = 0;
 
+    const position = [40, -120]
 
     // -- Fetch -- // 
     fetch(url)
@@ -31,8 +37,9 @@ export default function OneFire(props) {
             console.log('OneFire Latitude (mylat): ', mylat),
             console.log('OneFire Longitude: (mylong): ', mylong),
             console.log('For the Above ^ wildfire name (mytitle) is: ', mytitle)
-
         )
         )
         .catch(error => console.log(error));
+
+        
 };
