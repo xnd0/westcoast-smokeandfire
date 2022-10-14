@@ -10,6 +10,7 @@ import { data } from "./Data";
 import FireAPI from "./FireAPI";
 import APItest from "./APItest";
 import OneFire from "./OneFire";
+import AddMarker from "./AddMarker";
 
 
 export default function MainPage() {
@@ -21,11 +22,12 @@ export default function MainPage() {
             <div className='main-leftside'>
                 <p>(leftside)</p>
                 <p>search:
-                <img src={fireicon} alt="fire image" height={60} width={60} />
+                <img src={fireicon} alt="fire flames" height={60} width={60} />
                 </p>
                 <button onClick={FireAPI}> Active Wildfires </button>
                 <button onClick={APItest}> APItest </button>
                 <button onClick={OneFire}> console.log OneFire API data </button>
+                <button onClick={AddMarker}> Add Marker </button>
             </div>
 
             <div className='main-center'>

@@ -1,9 +1,12 @@
-import React from "react";
+// import React from "react";
+
+import React, { useState } from "react";
 
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 
-// import icon from "./smoke-and-fire-icon.png";
+import fireicon from "./images/fire-icon.png";
 
 
 
@@ -14,8 +17,12 @@ function SetViewOnClick({ coords, zoom }) {
   return null;
 }
 
+
+
 export default function Map(props) {
   const { index, data } = props;
+
+  L.marker([40, -140]);
 
   return (
     <MapContainer
@@ -36,7 +43,18 @@ export default function Map(props) {
           data[index].coordinates.latitude,
           data[index].coordinates.longitude
         ]}
-        // icon={icon}
+        // icon={fireicon}
+      >
+        <Popup>TEST-FIRE</Popup>
+      </Marker>
+
+      
+      <Marker
+        position={[
+          data[index].coordinates.latitude,
+          data[index].coordinates.longitude
+        ]}
+        // icon={fireicon}
       >
         <Popup>TEST-FIRE</Popup>
       </Marker>
