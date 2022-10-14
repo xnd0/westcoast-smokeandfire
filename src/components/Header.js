@@ -1,5 +1,5 @@
 import React from 'react';
-import firelogo from './smoke-and-fire-icon.png'
+import firelogo from './images/smoke-and-fire-icon.png'
 
 
 export default function Header() {

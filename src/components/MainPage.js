@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import fireicon from './images/fire-icon.png';
 
 import Map from "./Map";
 import { data } from "./Data";
@@ -19,7 +20,9 @@ export default function MainPage() {
         <div className='App-main'>
             <div className='main-leftside'>
                 <p>(leftside)</p>
-                <p>search:</p>
+                <p>search:
+                <img src={fireicon} alt="fire image" height={60} width={60} />
+                </p>
                 <button onClick={FireAPI}> Active Wildfires </button>
                 <button onClick={APItest}> APItest </button>
                 <button onClick={OneFire}> console.log OneFire API data </button>
