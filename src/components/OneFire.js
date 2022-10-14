@@ -1,32 +1,38 @@
-// import React from "react";
+import React from "react";
 
 export default function OneFire(props) {
-    let { mylat, mylong } = props;
+    let { mylat, mylong, mytitle } = props;
 
-    console.log('OneFire Button Trigger')
+    console.log('-- OneFire Button Triggered --')
 
     let url = 'https://eonet.gsfc.nasa.gov/api/v3/events?category=wildfires';
 
-    // let mylat = 0;
-    // let mylong = 0;
+    // -- NASA event id number: -- //
+    // -- will map to iterate for display all -- //
+    // -- adjust for different wildfires (events) -- //
+    let i = 0;
 
+
+    // -- Fetch -- // 
     fetch(url)
         .then(response => response.json())
         .then(data => (
-            console.log("0", data.events[0].title),
-            console.log("1", data.events[0]),
-            console.log("2", data.events[0].geometry),
-            console.log("3", data.events[0].geometry[0].coordinates),
-            console.log("4-latitude", data.events[0].geometry[0].coordinates[0]),
-            console.log("5-longitude", data.events[0].geometry[0].coordinates[1]),
+            console.log("0-wildfire title: ", data.events[i].title),
+            console.log("1", data.events[i]),
+            console.log("2", data.events[i].geometry),
+            console.log("3", data.events[i].geometry[i].coordinates),
+            console.log("4-latitude", data.events[i].geometry[i].coordinates[i]),
+            console.log("5-longitude", data.events[i].geometry[i].coordinates[(i + 1)]),
 
-            mylat = data.events[0].geometry[0].coordinates[0],
-            mylong = data.events[0].geometry[0].coordinates[1],
-            
+            mylat = data.events[i].geometry[i].coordinates[i],
+            mylong = data.events[i].geometry[i].coordinates[(i + 1)],
+            mytitle = data.events[i].title,
+
             console.log('OneFire Latitude (mylat): ', mylat),
-            console.log('OneFire Longitude: (mylong)', mylong)               
-        )
-        )
-        .catch(error => console.log(error))
+            console.log('OneFire Longitude: (mylong): ', mylong),
+            console.log('For the Above ^ wildfire name (mytitle) is: ', mytitle)
 
-}
+        )
+        )
+        .catch(error => console.log(error));
+};

@@ -25,5 +25,4 @@ export default function FireAPI() {
         )
 
         .catch(error => console.log(error))
-
-}
+};
